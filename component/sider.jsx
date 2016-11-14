@@ -7,6 +7,7 @@ import Hello from './test/hello.jsx';
 import World from './test/world.jsx';
 import ProductList from './test/productList.jsx';
 import NeuralNetwork from './neuralNetwork.jsx';
+import NetworkTopo from './networkTopo.jsx';
 
 const TAB_MAPPING = {
   'home': '首页',
@@ -37,6 +38,8 @@ function containRoute(key) {
     ReactDOM.render(<ProductList/>, document.getElementById('main-container'));
   } else if (key === '5') {
     ReactDOM.render(<NeuralNetwork/>, document.getElementById('main-container'));
+  } else if (key === '9') {
+    ReactDOM.render(<NetworkTopo/>, document.getElementById('main-container'));
   }
 }
 
