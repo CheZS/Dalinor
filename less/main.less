@@ -1,0 +1,52 @@
+@light-blue: #2DB7F5;//#69D2E7;
+@deep-blue: #00A0E9;
+@light-green: #A7DBDB;
+@light-yellow: #E0E4CC;
+@light-orange: #F38630;
+@deep-orange: #FA6900;
+@light-grey: #999;
+@deep-grey: #404040;
+@black: #000;
+
+.main-header {
+  top: 0px;
+  position: fixed;
+  width: 100%;
+  z-index: 0;
+  height: 80px;
+  background-color: @light-blue;
+  .logo {
+    position: absolute;
+    height: 40px;
+    left: 20px;
+    bottom: 17px;
+  }
+  .title {
+    font-size: 38px;
+    color: @black;
+    position: absolute;
+    bottom: 10px;
+    left: 260px;
+  }
+  .user-info {
+    position: absolute;
+    font-size: 16px;
+    right: 20px;
+    bottom: 10px;
+    color: @black;
+  }
+}
+.main-sider {
+  position: fixed;
+  height: 100%;
+  z-index: 1;
+  left: 0px;
+  ul {
+    height: 100%;
+  }
+}
+.main-container {
+  margin-top: 80px;
+  margin-left: 240px;
+  padding-left: 20px;
+}
