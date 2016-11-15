@@ -9,10 +9,12 @@ import TableTest from './test/table.jsx';
 import ProductList from './test/productList.jsx';
 import DropdownTest from './test/dropdown.jsx';
 import TimeLineTest from './test/timeLine.jsx';
+// import LineGraph from './test/lineGraph.jsx';
 import NeuralNetwork from './neuralNetwork.jsx';
 import NetworkTopo from './networkTopo.jsx';
 import ClassificationResult from './classificationResult.jsx';
 import ScriptStatus from './scriptStatus.jsx';
+import FlowSchedule from './flowSchedule.jsx';
 
 const TAB_MAPPING = {
   'home': '首页',
@@ -47,8 +49,8 @@ function containRoute(key) {
     ReactDOM.render(<ClassificationResult/>, document.getElementById('main-container'));
   } else if (key === '9') {
     ReactDOM.render(<NetworkTopo/>, document.getElementById('main-container'));
-  } else if (key === '6') {
-    ReactDOM.render(<TableTest/>, document.getElementById('main-container'));
+  } else if (key === '11') {
+    ReactDOM.render(<FlowSchedule/>, document.getElementById('main-container'));
   }
 }
 
