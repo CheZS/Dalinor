@@ -12,6 +12,7 @@ import TimeLineTest from './test/timeLine.jsx';
 import NeuralNetwork from './neuralNetwork.jsx';
 import NetworkTopo from './networkTopo.jsx';
 import ClassificationResult from './classificationResult.jsx';
+import ScriptStatus from './scriptStatus.jsx';
 
 const TAB_MAPPING = {
   'home': '首页',
@@ -37,14 +38,13 @@ function containRoute(key) {
   if (key === 'home') {
     ReactDOM.render(<Hello/>, document.getElementById('main-container'));
   } else if (key === '2') {
-    ReactDOM.render(<TimeLineTest/>, document.getElementById('main-container'));
+    ReactDOM.render(<ScriptStatus/>, document.getElementById('main-container'));
   } else if (key === '3') {
     ReactDOM.render(<ProductList/>, document.getElementById('main-container'));
   } else if (key === '5') {
     ReactDOM.render(<NeuralNetwork/>, document.getElementById('main-container'));
   } else if (key === '6') {
     ReactDOM.render(<ClassificationResult/>, document.getElementById('main-container'));
-    // ReactDOM.render(<DropdownTest/>, document.getElementById('main-container'));
   } else if (key === '9') {
     ReactDOM.render(<NetworkTopo/>, document.getElementById('main-container'));
   } else if (key === '6') {
