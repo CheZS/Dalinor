@@ -103,12 +103,21 @@ class ClassificationResult extends React.Component {
         <Row>
           <Col span={8}>
             <Progress type="circle" percent={80} format={percent => percent + '%'} />
+            <div>
+              <span>准确度</span>
+            </div>
           </Col>
           <Col span={8}>
             <span className="traning-time">{this.state.traningTime}</span>
+            <div>
+              <span>训练时间</span>
+            </div>
           </Col>
           <Col span={8}>
             <span className="error-expect">{this.state.errorExpect}</span>
+            <div>
+              <span>误差期望</span>
+            </div>
           </Col>
         </Row>
       </div>

@@ -1,4 +1,4 @@
-// import echarts from 'echarts';
+import echarts from 'echarts';
 import React from 'react';
 import { Table, Icon, Input, InputNumber, Menu, Dropdown, Button, Progress, Row, Col } from 'antd';
 
@@ -16,7 +16,8 @@ class FlowSchedule extends React.Component {
 
   componentDidMount() {
     // 基于准备好的dom，初始化echarts实例
-    var myChart = echarts.init(document.getElementById('bandwidth-chart'));
+    var bandwidthChart = echarts.init(document.getElementById('bandwidth-chart'));
+    var satisfyChart = echarts.init(document.getElementById('satisfy-chart'));
     // 绘制图表
     var option = {
       title: {
@@ -63,7 +64,8 @@ class FlowSchedule extends React.Component {
         data: [1320, 1132, 601, 234, 120, 90, 20]
       }]
     };
-    myChart.setOption(option);
+    bandwidthChart.setOption(option);
+    satisfyChart.setOption(option);
   }
 
   initAlgo() {
@@ -101,11 +103,11 @@ class FlowSchedule extends React.Component {
   }
 
   initBandwidthGraph() {
-    return (<div id="bandwidth-chart"></div>);
+    return (<div id="bandwidth-chart" style={{width: 800 + 'px', height: 600 + 'px'}}></div>);
   }
 
   initSatisfyGraph() {
-    return (<div id="satisfy-chart"></div>);
+    return (<div id="satisfy-chart" style={{width: 800 + 'px', height: 600 + 'px'}}></div>);
   }
 
   initStatistic() {
@@ -114,15 +116,27 @@ class FlowSchedule extends React.Component {
         <Row>
           <Col span={6}>
             <span className="bandwidth-expect">{this.state.bandwidthExpect}</span>
+            <div>
+              <span>带宽期望</span>
+            </div>
           </Col>
           <Col span={6}>
             <span className="bandwidth-variance">{this.state.bandwidthVariance}</span>
+            <div>
+              <span>带宽方差</span>
+            </div>
           </Col>
           <Col span={6}>
             <span className="satisfy-expect">{this.state.satisfyExpect}</span>
+            <div>
+              <span>满意度期望</span>
+            </div>
           </Col>
           <Col span={6}>
             <span className="satisfy-variance">{this.state.satisfyVariance}</span>
+            <div>
+              <span>满意度方差</span>
+            </div>
           </Col>
         </Row>
       </div>
@@ -130,12 +144,11 @@ class FlowSchedule extends React.Component {
   }
 
   render() {
-    // {this.initBandwidthGraph()}
-    // {this.initSatisfyGraph()}
     return (
-      <div>
+      <div className="flow-schedule">
         {this.initConfig()}
-
+        {this.initBandwidthGraph()}
+        {this.initSatisfyGraph()}
         {this.initStatistic()}
       </div>
     );
