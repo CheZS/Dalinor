@@ -17,6 +17,7 @@ import ScriptStatus from './scriptStatus.jsx';
 import FlowSchedule from './flowSchedule.jsx';
 import SatisfyModel from './satisfyModel.jsx';
 import FlowFeature from './flowFeature.jsx';
+import Home from './home.jsx';
 
 const TAB_MAPPING = {
   'home': '首页',
@@ -40,7 +41,7 @@ const TAB_MAPPING = {
 
 function containRoute(key) {
   if (key === 'home') {
-    ReactDOM.render(<Hello/>, document.getElementById('main-container'));
+    ReactDOM.render(<Home/>, document.getElementById('main-container'));
   } else if (key === '2') {
     ReactDOM.render(<ScriptStatus/>, document.getElementById('main-container'));
   } else if (key === '3') {
