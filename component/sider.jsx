@@ -16,6 +16,7 @@ import ClassificationResult from './classificationResult.jsx';
 import ScriptStatus from './scriptStatus.jsx';
 import FlowSchedule from './flowSchedule.jsx';
 import SatisfyModel from './satisfyModel.jsx';
+import FlowFeature from './flowFeature.jsx';
 
 const TAB_MAPPING = {
   'home': '首页',
@@ -43,7 +44,7 @@ function containRoute(key) {
   } else if (key === '2') {
     ReactDOM.render(<ScriptStatus/>, document.getElementById('main-container'));
   } else if (key === '3') {
-    ReactDOM.render(<ProductList/>, document.getElementById('main-container'));
+    ReactDOM.render(<FlowFeature/>, document.getElementById('main-container'));
   } else if (key === '5') {
     ReactDOM.render(<NeuralNetwork/>, document.getElementById('main-container'));
   } else if (key === '6') {
